@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS task-02</title>
+  </head>
+  <body>
+    <h1>Reversing and sorting the string</h1>
+    <label for="input">Enter the string :</label>
+    <input type="text" name="input" id="input" />
+    <p>open console to view output</p>
+    <br />
+    <button onclick="sortString()">Sort String</button>
+    <h4>Sorted String is:<div id="result"></div></h4>
+  </body>
+  <script>
+    function sortString() {
+      const inputString = document.getElementById("input").value;
+      console.log("Original String: " + inputString);
+      const sorted = inputString.split("").sort().join("");
+      console.log("Sorted String :" + sorted);
+      document.getElementById("result").innerHTML=sorted;
+
+    }
+  </script>
+</html>
